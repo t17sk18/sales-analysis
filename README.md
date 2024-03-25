@@ -1,4 +1,5 @@
 # Optimizing Sales Strategies and Enhancing Customer Experience
+![alt text](image.png)
 
 ## Background
 In the dynamic landscape of sales and marketing, data-driven insights play a pivotal role in shaping strategic decisions, enhancing operational efficiency, and fostering customer satisfaction. Modern businesses rely on comprehensive analyses of sales performance, customer feedback, operational metrics, and market trends to stay competitive and drive sustainable growth. By leveraging diverse datasets encompassing sales transactions, product details, location information, discount strategies, sales channels, targets, and complaints/returns, companies can unlock valuable insights to refine their sales strategies and elevate the overall customer.
@@ -248,29 +249,3 @@ IF(
 Country Color = IF( [Country Rank] <= 'TopN'[TopN Value], "#7999FF", "#4F4F4F")
 
 *********************************** You can Include more DAX Function*****************************
-How to write this project in resume
-
-Project Heading: Optimizing Sales Strategies and Enhancing Customer Experience
-
-●	Led a comprehensive data analysis project focused on optimizing sales strategies and enhancing customer experience within a sales and marketing context.
-●	Integrated multiple datasets including sales transactions, product details, location information, discount data, sales channel details, sales target data, and complaints & returns data for a holistic analysis.
-●	Employed advanced analytical techniques to derive actionable insights aimed at improving sales performance, customer satisfaction, and operational efficiency.
-
-
-## Analysis Objectives:
-
-●	Evaluate sales trends over time, across different channels, countries, and geographic regions.
-●	Assess the impact of discount strategies on sales volume, profitability, and customer behavior.
-●	Analyze customer satisfaction levels, complaints, and returns to identify areas for improvement in product offerings and service quality.
-●	Optimize sales channels and distribution strategies to maximize revenue and market reach.
-●	Assess the alignment of sales targets with actual performance and identify opportunities for improvement.
-●	Provide strategic recommendations to drive sustainable growth and competitive advantage.
-
-## Result Impacts:
-
-●	Identified underperforming sales channels and recommended reallocation of resources, resulting in a 15% increase in sales revenue.
-●	Proposed pricing adjustments based on product profitability analysis, leading to a 10% improvement in profit margins.
-●	Analyzed customer feedback and complaints data to identify key pain points and improve product quality, resulting in a 20% reduction in product returns.
-●	Developed targeted marketing campaigns based on customer segmentation, resulting in a 25% increase in customer engagement and retention.
-●	Aligned sales targets with historical performance and market trends, leading to a 10% improvement in target achievement rates.
-●	Presented actionable insights and recommendations to senior management, driving strategic decision-making and long-term business growth.
