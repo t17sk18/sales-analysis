@@ -143,36 +143,44 @@ d.	Support strategic planning efforts to drive sustainable growth and competitiv
 DAX Functions Implementation
 
 - Cost Last Year
+
 Cost LY = CALCULATE([Total Cost], DATEADD('Calendar'[Date], -1, YEAR))
 
 - Country Rank
+
 Country Rank = 
 IF(
     HASONEVALUE('Location Details'[Country]), 
     RANKX(ALL('Location Details'[Country]), 'All Measures'[Total Sales],,DESC))
 
 - Customer Rating Color
+
 CR Color = SWITCH(TRUE(),
     [Customer Rating Count] > [Customer Rating LY], "#00FF00",
     [Customer Rating Count] <= [Customer Rating LY], "#C00000"
 )
 
 - Customer Rating % Difference 
+
 Customer Rating % Diff = DIVIDE([Customer Rating Count] - [Customer Rating LY], [Customer Rating LY])
 
 - Customer Rating Count
 Customer Rating Count = COUNTX('Sales Data', 'Sales Data'[Customer Rating])
 
 - Customer Rating Last Year
+
 Customer Rating LY = CALCULATE([Customer Rating Count], SAMEPERIODLASTYEAR('Calendar'[Date]))
 
 - New Customer
+
 New Customer = COUNTX(FILTER('Sales Data', 'Sales Data'[Customer Type] = "New"), 'Sales Data'[Customer Type])
 
 - OLD Customers
+
 OLD Customers = COUNTX(FILTER('Sales Data', 'Sales Data'[Customer Type] = "Returning"), 'Sales Data'[Customer Type])
 
 - Product Rank
+
 Product Rank = 
 IF(
     HASONEVALUE('Products Details'[Product Name]),
@@ -180,72 +188,90 @@ IF(
     'All Measures'[Total Sales], , DESC))
 
 - Profit Last Year
--- Profit % LY = CALCULATE([Total Profit %], DATEADD('Calendar'[Date], -1, YEAR))
+
+Profit % LY = CALCULATE([Total Profit %], DATEADD('Calendar'[Date], -1, YEAR))
 
 - Profit Last Year
+
 Profit LY = CALCULATE([Total Profit], DATEADD('Calendar'[Date], -1, YEAR))
 
 - Sales Last Year
-Sales LY = 
-CALCULATE([Total Sales], DATEADD('Calendar'[Date], -1, YEAR))
+
+Sales LY = CALCULATE([Total Sales], DATEADD('Calendar'[Date], -1, YEAR))
 
 - Total Cost - Difference
+
 TC - Diff = DIVIDE([Total Cost]-[Cost LY], [Cost LY])
 
 - Total Cost Color
+
 TC Color = SWITCH(TRUE(),
 [Total Cost] > [Cost LY], "#00B050", "#C00000")
 
 - Total Cost
+
 Total Cost = SUMX('Sales Data', 'Sales Data'[Cost Price])
 
 - Total Customers
+
 Total Coustomers = COUNTX('Sales Data', 'Sales Data'[Channel Type])
 
 - Total Profit
+
 Total Profit = SUMX('Sales Data', 'Sales Data'[Profit/Loss])
 
 - Total Profit %
+
 Total Profit % = DIVIDE([Total Profit], [Total Cost])
 
 - Total Sales
+
 Total Sales = SUMX('Sales Data', 'Sales Data'[Final Sales Price])
 
 - Total Target Sales
+
 Total Target Sales = AVERAGE('Sales Target'[Target])
 
 - Total Profit - Difference
+
 TP - Diff = DIVIDE([Total Profit] - [Profit LY], [Profit LY])
 
 
 - Total Profit % Difference
+
 TP % - Diff = DIVIDE([Total Profit %] - [Profit % LY], [Profit % LY])
 
 - Total Profit % Color 
-TP % Color = SWITCH(TRUE(),
-[Total Profit %] > [Profit % LY], "#00B050", "#C00000")
+
+TP % Color = SWITCH(TRUE(), [Total Profit %] > [Profit % LY], "#00B050", "#C00000")
 
 - Total Profit Color
+
 TP Color = SWITCH(TRUE(),
 [Total Profit] > [Profit LY], "#00B050", "#C00000")
 
 - Total Sales - Difference
+
 TS - Diff = DIVIDE([Total Sales] - [Sales LY], [Sales LY])
 
 - Total Sales Color 
+
 TS Color = SWITCH(TRUE(),
 [Total Sales] > [Sales LY], "#00B050", "#C00000")
 
 - Target Status
+
 Target Status = SWITCH(TRUE(),
 [Total Sales] > [Total Target Sales], "#00B050", "#C00000")
 
 - Product Color
+
 Product Color = 
 IF(
     [Product Rank] <='TopN'[TopN Value], "#7999FF", "#4F4F4F")
 
 - Country Color
+
 Country Color = IF( [Country Rank] <= 'TopN'[TopN Value], "#7999FF", "#4F4F4F")
 
-*********************************** You can Include more DAX Function*****************************
+*********************************** You can Include more DAX Functions *****************************
