@@ -45,7 +45,7 @@ The primary objective of this project is to conduct an integrated analysis of mu
 
 3.	Brand Name: The brand associated with the product, indicating the manufacturer or company that produces or markets the product. Brand names are essential for brand recognition and building customer trust and loyalty.
 
-4.	Product Category: The category to which the product belongs, grouping similar products together based on their characteristics, functions, or intended use. Product categories help organize inventory and facilitate product discovery for customers.
+4.	Product Category: The category to which the product belongs, grouping similar products based on their characteristics, functions, or intended use. Product categories help organize inventory and facilitate product discovery for customers.
 
 5.	Product Class: This refers to the classification or type of the product within its category. Product class may denote different variations, models, or specifications of a product within a broader category.
 
@@ -63,7 +63,7 @@ The primary objective of this project is to conduct an integrated analysis of mu
 ## Discount Details:
 1.	Discount Type Id: This is a unique identifier assigned to each discount type in the dataset. It serves as a key for referencing and differentiating between individual discount types.
 
-2.	Discount Type: This feature represents the type or category of discount applied to sales transactions. Discount types could include Flash Sale, seasonal discounts, Coupons Sale, clearance sales, etc. Each discount type typically has its own terms and conditions governing its application.
+2.	Discount Type: This feature represents the type or category of discount applied to sales transactions. Discount types could include Flash Sale, seasonal discounts, Coupons Sale, clearance sales, etc. Each discount type typically has its terms and conditions governing its application.
 
 3.	Discount %: This feature denotes the percentage of discount applied to the sales transaction. It represents the reduction in the sale price offered to customers as an incentive to encourage purchases. The discount percentage determines the amount subtracted from the original sale price to calculate the final discounted price.
 
@@ -123,12 +123,12 @@ d.	Assess product profitability and pricing strategies to maximize revenue.
 
 a.	Analyze the effectiveness of different sales channels and channel types.
 b.	Identify high-performing sales channels and optimize resource allocation.
-c.	Evaluate the geographic distribution of sales and identify opportunities for expansion.
+c.	Evaluate the geographic distribution of sales and identify expansion opportunities.
 d.	Assess the alignment of sales channels with customer preferences and market demand.
 
 5.	Operational Efficiency and Target Achievement:
 
-a.	Evaluate the company's performance against sales targets set for different time periods.
+a.	Evaluate the company's performance against sales targets set for different periods.
 b.	Identify factors contributing to target achievement or shortfall.
 c.	Analyze operational efficiency in handling complaints, returns, and customer inquiries.
 d.	Identify opportunities to streamline processes and improve resource allocation.
@@ -180,7 +180,7 @@ IF(
     'All Measures'[Total Sales], , DESC))
 
 - Profit Last Year
-Profit % LY = CALCULATE([Total Profit %], DATEADD('Calendar'[Date], -1, YEAR))
+-- Profit % LY = CALCULATE([Total Profit %], DATEADD('Calendar'[Date], -1, YEAR))
 
 - Profit Last Year
 Profit LY = CALCULATE([Total Profit], DATEADD('Calendar'[Date], -1, YEAR))
